@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
+
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +23,13 @@ Route::get('/welcome', function () {
 Route::get('/user', function () {
     return view('user');
 })->name('user');
+
+Route::get('post/add', function() {
+   DB::table('post')->insert([
+    'id' => 190107110,
+    'title' =>'lab',
+    'body' =>'Document',
+    'added_on' =>'2005-10-30 10:45'
+   ]);
+});
+
