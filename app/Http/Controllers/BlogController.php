@@ -12,9 +12,9 @@ use App\Models\Post;
 class BlogController extends Controller
 {
     public function index(){
-     $blogs = Blog::all();
+     $post = Post::all();
 
- return view('blog.index')->with(['blogs' => $blogs]);
+ return view('blog.index')->with(['post' => $post]);
 
     }
 

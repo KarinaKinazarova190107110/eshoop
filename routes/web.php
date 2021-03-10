@@ -45,7 +45,8 @@ Route::get('post', function(){
 
 
 
-Route::get('blog',[BlogController::class,'index']);
+Route::get('post',[BlogController::class,'index']);
+
 
 
 Route::get('post/{id}',[BlogController::class,'get_post']);

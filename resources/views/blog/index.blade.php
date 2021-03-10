@@ -8,6 +8,6 @@
         </head>
         <body>
      
-    {{$blogs}}
+    {{$post}}
     </body>
 </html>
