@@ -15,8 +15,20 @@ class BlogController extends Controller
      $post = Post::all();
 
  return view('blog.index')->with(['post' => $post]);
-
     }
+
+ /*   public function store(Request $request){
+        dd($request->title);
+    }
+*/
+public function store(Request $request){
+    Post::create([
+        'title' => $request->title,
+         'body' => $request->body,
+    ]);
+    return back();
+}
+
 
     public function get_post($id){
         $post = Post::find($id);

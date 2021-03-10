@@ -28,7 +28,7 @@ Route::get('/user', function () {
     return view('user');
 })->name('user');
 
-Route::get('post/create', function() {
+/*Route::get('post/create', function() {
    DB::table('post')->insert([
    
     'title' =>'lab',
@@ -37,7 +37,7 @@ Route::get('post/create', function() {
    ]);
 
 });
-
+*/
 Route::get('post', function(){
     $post = Post::find(1);
     return $post;
@@ -46,6 +46,11 @@ Route::get('post', function(){
 
 
 Route::get('post',[BlogController::class,'index']);
+Route::get('blog/create', function(){
+    return view('blog.create');
+});
+
+Route::post('blog/create',[BlogController::class,'store'])->name('add-post');
 
 
 
