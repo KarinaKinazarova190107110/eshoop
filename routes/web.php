@@ -28,14 +28,13 @@ Route::get('/user', function () {
     return view('user');
 })->name('user');
 
-Route::get('post/create', function() {
+Route::get('post/add', function() {
    DB::table('post')->insert([
    
     'title' =>'lab',
     'body' =>'Document',
    
    ]);
-
 });
 
 Route::get('post', function(){
@@ -46,11 +45,12 @@ Route::get('post', function(){
 
 
 Route::get('post',[BlogController::class,'index']);
-Route::get('blog/create', function(){
+Route::get('post/create', function(){
     return view('blog.create');
 });
 
-Route::post('tblog/create',[BlogController::class,'store'])->name('add-post');
+Route::post('post/create',[BlogController::class,'store'])->name('add-post');
+
 
 
 
