@@ -52,7 +52,13 @@ Route::get('post/create', function(){
 Route::post('post/create',[BlogController::class,'store'])->name('add-post');
 
 
-
-
 Route::get('post/{id}',[BlogController::class,'get_post']);
 
+
+Route::get('/uploadfile','UploadFileController@index');
+Route::post('/uploadfile','UploadFileController@showUploadFile');
+
+Route::get('/multiuploads','UploadController@uploadForm');
+Route::post('/multiuploads','UploadController@uploadSubmit');
+
+Route::get('mail/send', 'MailController@send');
