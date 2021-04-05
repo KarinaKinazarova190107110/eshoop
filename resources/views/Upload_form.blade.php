@@ -30,7 +30,7 @@ margin-top:2%;
 <div class="container">
 <div class="row">
 <div class="col-md-2"> <img src="/32114.svg" width="80" /></div>
-<div class="col-md-8"><h2>Laravel Multiple File Uploading With Bootstrap Form</h2>
+<div class="col-md-8"><h2>Laravel  Form</h2>
 </div>
 </div>
 <br>

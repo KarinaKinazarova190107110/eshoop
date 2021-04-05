@@ -62,3 +62,11 @@ Route::get('/multiuploads','UploadController@uploadForm');
 Route::post('/multiuploads','UploadController@uploadSubmit');
 
 Route::get('mail/send', 'MailController@send');
+
+
+Route::get('/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('home');
+});
+
+Route::get('/{lang},LocalizationController@index');
