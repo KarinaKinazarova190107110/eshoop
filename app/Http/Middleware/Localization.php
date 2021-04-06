@@ -20,5 +20,7 @@ public function handle($request, Closure $next) {
         App::setlocale(session()->get('locale'));
     }
     return $next($request);
+  
 }
+
 }
