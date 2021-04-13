@@ -1,5 +1,5 @@
 <?php
- return [ 'welcome' => 'Welcome: Name',
+ return [ 'welcome' => 'Hello leave me a message',
 ]
 ?>
 

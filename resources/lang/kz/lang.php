@@ -1,6 +1,6 @@
 
 <?php
- return [ 'welcome' => 'Welcome! ',
+ return [ 'welcome' => 'Сәлеметсіз бе, маған хабарлама қалдырыңыз ',
   ]
 ?>
 

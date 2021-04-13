@@ -35,7 +35,7 @@ ItemDetails::create([
 'filename' => $filename
 ]);
 }
-echo "Upload Successfully";
+return back()->with(['message' => 'Email successfully sent!']);
 }
 else
 {
